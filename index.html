@@ -5,8 +5,9 @@
   <title>HLS Video Stream</title>
 </head>
 <body>
-  <video id="video" controls width="640" height="360"></video>
-
+  <center><video id="video" controls width="640" height="360"></video></center>
+	<h3>How I did this:</h3>
+	<p>I downloaded the video in full resolution, and then using ffmpeg inside a .sh script i automatically encoded it into three different resolutions. After that I wrote this page to run an HLS JS script that chooses an appropriate resolution and starts pulling the video elements from folders using the playback instructions from .m3u8 files.</p>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script>
     const video = document.getElementById('video');
